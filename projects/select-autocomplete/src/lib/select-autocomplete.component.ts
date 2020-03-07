@@ -19,7 +19,6 @@ import { FormControl } from "@angular/forms";
         [placeholder]="placeholder"
         [formControl]="formControl"
         [multiple]="multiple"
-        [(ngModel)]="selectedValue"
         (selectionChange)="onSelectionChange($event)"
       >
         <div class="box-search">
@@ -116,8 +115,15 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
 
   @ViewChild("selectElem") selectElem;
 
+  get selectedValue(): Array<any> {
+    return this.formControl.value;
+  }
+
+  set selectedValue(value) {
+    this.formControl.setValue(value);
+  }
+
   filteredOptions: Array<any> = [];
-  selectedValue: Array<any> = [];
   selectAllChecked = false;
   displayString = "";
   constructor() {}
