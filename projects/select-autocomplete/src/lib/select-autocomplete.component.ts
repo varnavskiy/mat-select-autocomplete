@@ -13,12 +13,12 @@ import { FormControl } from "@angular/forms";
   selector: "mat-select-autocomplete",
   template: `
     <mat-form-field appearance="{{ appearance }}">
+      <mat-label *ngIf="label">{{ label }}</mat-label>
       <mat-select
         #selectElem
         [placeholder]="placeholder"
         [formControl]="formControl"
         [multiple]="multiple"
-        [(ngModel)]="selectedValue"
         (selectionChange)="onSelectionChange($event)"
       >
         <div class="box-search">
@@ -108,14 +108,22 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
   // New Options
   @Input() labelCount: number = 1;
   @Input() appearance: "standard" | "fill" | "outline" = "standard";
+  @Input() label: string = "";
 
   @Output()
   selectionChange: EventEmitter<any> = new EventEmitter();
 
   @ViewChild("selectElem", { static: true }) selectElem;
 
+  get selectedValue(): Array<any> {
+    return this.formControl.value;
+  }
+
+  set selectedValue(value) {
+    this.formControl.setValue(value);
+  }
+
   filteredOptions: Array<any> = [];
-  selectedValue: Array<any> = [];
   selectAllChecked = false;
   displayString = "";
   constructor() {}

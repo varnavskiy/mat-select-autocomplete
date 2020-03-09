@@ -1,4 +1,31 @@
-# SelectAutocompleteApp
+# MatSelect Autocomplete component for Angular Material
+
+### Forked from:
+
+[https://github.com/malothnaresh/mat-select-autocomplete](https://github.com/malothnaresh/mat-select-autocomplete)
+
+#### Changes
+
+- add optional input for using `<mat-label>`
+- update peer dependencies to 6.1.10
+- fix [(ngModel)] deprecation warning
+- bumped package version to 1.3.1
+
+#### Installation
+
+`npm install oak-mat-select-autocomplete --save`
+
+#### Demo
+
+https://stackblitz.com/edit/mat-select-autocomplete
+
+#### Documentation
+
+https://medium.com/@cryptoipl/angular-material-multi-select-with-autocomplete-113065d58dab
+
+---
+
+_Original readme:_
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
@@ -27,14 +54,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Demo
+
 https://stackblitz.com/edit/mat-select-autocomplete
+
 ## Documentation
+
 https://medium.com/@cryptoipl/angular-material-multi-select-with-autocomplete-113065d58dab
 
-
 ## To build package
+
 npm run package
 
 ## To publish the package
+
 npm login
 npm publish ./dist/select-autocomplete/mat-select-autocomplete-1.2.1.tgz
