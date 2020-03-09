@@ -143,8 +143,10 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
   }
 
   ngDoCheck() {
-    if (!this.selectedValue.length) {
-      this.selectionChange.emit(this.selectedValue);
+    if (this.selectedValue != null) {
+      if (!this.selectedValue.length) {
+        this.selectionChange.emit(this.selectedValue);
+      }
     }
   }
 
