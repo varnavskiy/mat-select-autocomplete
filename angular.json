@@ -10,14 +10,13 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "styleext": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/select-autocomplete-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -34,12 +33,6 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -140,7 +133,7 @@
       "prefix": "mat",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "styleext": "scss"
         }
       },
       "architect": {
@@ -150,12 +143,7 @@
             "tsConfig": "projects/select-autocomplete/tsconfig.lib.json",
             "project": "projects/select-autocomplete/ng-package.json"
           }
-        ,          "configurations": {
-            "production": {
-              "tsConfig": "projects/select-autocomplete/tsconfig.lib.prod.json"
-            }
-          }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
