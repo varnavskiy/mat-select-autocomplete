@@ -11,6 +11,10 @@ Combination of drog (angular/material 8 update) and oak's forks of mat-select-au
 - Add fix to check if selectedValue is null to prevent some not a property of null errors
 - Bumped package version to 1.4.2
 
+#### Installation
+
+`npm install crono-mat-select-autocomplete --save`
+
 ---
 
 _Oak's readme:_
