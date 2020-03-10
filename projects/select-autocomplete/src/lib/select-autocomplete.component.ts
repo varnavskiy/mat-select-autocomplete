@@ -176,8 +176,10 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
     );
     this.selectAllChecked = true;
     this.filteredOptions.forEach(item => {
-      if (!this.selectedValue.includes(item[this.value])) {
-        this.selectAllChecked = false;
+      if (this.selectedValue != null) {
+        if (!this.selectedValue.includes(item[this.value])) {
+          this.selectAllChecked = false;
+        }
       }
     });
     if (!this.filteredOptions.length) {
