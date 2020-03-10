@@ -1,5 +1,20 @@
 # MatSelect Autocomplete component for Angular Material
 
+Combination of drog (angular/material 8 update) and oak's forks of mat-select-autocomplete + 1 fix
+
+### Forked from:
+
+[https://github.com/drog/mat-select-autocomplete](https://github.com/drog/mat-select-autocomplete)
+
+### Changes
+
+- Add fix to check if selectedValue is null to prevent some not a property of null errors
+- Bumped package version to 1.4.2
+
+---
+
+_Oak's readme:_
+
 ### Forked from:
 
 [https://github.com/malothnaresh/mat-select-autocomplete](https://github.com/malothnaresh/mat-select-autocomplete)
