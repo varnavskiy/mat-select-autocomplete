@@ -1,6 +1,6 @@
 {
   "name": "select-autocomplete-app",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "build_lib": "ng build select-autocomplete",
     "npm_pack": "cd dist/select-autocomplete && npm pack",
     "package": "npm run build_lib && npm run npm_pack",
-    "publish": "npm publish ./dist/select-autocomplete/crono-mat-select-autocomplete-1.4.2.tgz",
+    "publish": "npm publish ./dist/select-autocomplete/crono-mat-select-autocomplete-1.4.3.tgz",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

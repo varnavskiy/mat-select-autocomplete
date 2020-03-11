@@ -2,6 +2,9 @@
 
 MatSelectAutocomplete is Angular based material component with feature of multi-options selection and autocomplete features
 
+Combination of drog (angular/material 8 update) and oak's forks of mat-select-autocomplete + 1 fix
+
+[GitHub] (https://github.com/crono9977/mat-select-autocomplete)
 [Demo] (https://stackblitz.com/edit/mat-select-autocomplete)
 [Documentation] (https://medium.com/@cryptoipl/angular-material-multi-select-with-autocomplete-113065d58dab)
 
@@ -15,7 +18,7 @@ MatSelectAutocomplete is Angular based material component with feature of multi-
 
 ## Installation
 Install MatSelectAutocomplete with npm:
-npm install select-autocomplete --save
+npm install crono-mat-select-autocomplete --save
 
 ## Dependency
 Angular Material. Add it using [GettingStartedWithAngularMaterial].
