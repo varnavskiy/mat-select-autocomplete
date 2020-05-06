@@ -6,11 +6,11 @@ import {
   Output,
   ViewChild,
   DoCheck
-} from "@angular/core";
-import { FormControl } from "@angular/forms";
+} from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: "mat-select-autocomplete",
+  selector: 'mat-select-autocomplete',
   template: `
     <mat-form-field appearance="{{ appearance }}">
       <mat-label *ngIf="label">{{ label }}</mat-label>
@@ -68,6 +68,10 @@ import { FormControl } from "@angular/forms";
           0 0 0 1px rgba(0, 0, 0, 0.08);
         transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
+        position: sticky;
+        top: 8px;
+        background-color: white;
+        z-index: 2;
       }
       .box-search input {
         flex: 1;
@@ -93,27 +97,27 @@ import { FormControl } from "@angular/forms";
   ]
 })
 export class SelectAutocompleteComponent implements OnChanges, DoCheck {
-  @Input() selectPlaceholder: string = "search...";
+  @Input() selectPlaceholder = 'search...';
   @Input() placeholder: string;
   @Input() options;
   @Input() disabled = false;
-  @Input() display = "display";
-  @Input() value = "value";
+  @Input() display = 'display';
+  @Input() value = 'value';
   @Input() formControl: FormControl = new FormControl();
-  @Input() errorMsg: string = "Field is required";
+  @Input() errorMsg = 'Field is required';
   @Input() showErrorMsg = false;
   @Input() selectedOptions;
   @Input() multiple = true;
 
   // New Options
-  @Input() labelCount: number = 1;
-  @Input() appearance: "standard" | "fill" | "outline" = "standard";
-  @Input() label: string = "";
+  @Input() labelCount = 1;
+  @Input() appearance: 'standard' | 'fill' | 'outline' = 'standard';
+  @Input() label = '';
 
   @Output()
   selectionChange: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild("selectElem", { static: true }) selectElem;
+  @ViewChild('selectElem', { static: true }) selectElem;
 
   get selectedValue(): Array<any> {
     return this.formControl.value;
@@ -125,7 +129,7 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
 
   filteredOptions: Array<any> = [];
   selectAllChecked = false;
-  displayString = "";
+  displayString = '';
   constructor() {}
 
   ngOnChanges() {
@@ -201,7 +205,7 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
   }
 
   onDisplayString() {
-    this.displayString = "";
+    this.displayString = '';
     if (this.selectedValue && this.selectedValue.length) {
       let displayOption = [];
       if (this.multiple) {
@@ -214,7 +218,7 @@ export class SelectAutocompleteComponent implements OnChanges, DoCheck {
         if (displayOption.length) {
           for (let i = 0; i < displayOption.length; i++) {
             if (displayOption[i] && displayOption[i][this.display]) {
-              this.displayString += displayOption[i][this.display] + ",";
+              this.displayString += displayOption[i][this.display] + ',';
             }
           }
           this.displayString = this.displayString.slice(0, -1);

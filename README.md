@@ -8,6 +8,10 @@ Combination of drog (angular/material 8 update) and oak's forks of mat-select-au
 
 #### Changes
 
+[1.4.5]
+- Make search bar sticky
+
+[1.4.2]
 - Add fix to check if selectedValue is null to prevent some not a property of null errors
 - Bumped package version to 1.4.2
 

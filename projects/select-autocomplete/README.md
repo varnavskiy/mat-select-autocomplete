@@ -8,6 +8,15 @@ Combination of drog (angular/material 8 update) and oak's forks of mat-select-au
 [Demo] (https://stackblitz.com/edit/mat-select-autocomplete)
 [Documentation] (https://medium.com/@cryptoipl/angular-material-multi-select-with-autocomplete-113065d58dab)
 
+## Changes
+
+[1.4.5]
+- Make search bar sticky
+
+[1.4.2]
+- Add fix to check if selectedValue is null to prevent some not a property of null errors
+- Bumped package version to 1.4.2
+
 ## Features
 
 <ul>
