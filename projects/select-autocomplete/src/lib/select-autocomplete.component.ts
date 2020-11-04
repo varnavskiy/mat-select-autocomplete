@@ -30,7 +30,7 @@ import { FormControl } from '@angular/forms';
             (change)="toggleSelectAll($event)"
           ></mat-checkbox>
           <input
-            #searchInput
+            #searchInput cdkFocusRegionstart
             type="text"
             [ngClass]="{ 'pl-1': !multiple }"
             (input)="filterItem(searchInput.value)"
